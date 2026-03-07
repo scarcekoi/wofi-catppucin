@@ -35,12 +35,15 @@
 
 ## Usage
 
-1. Clone this repository or download the flavor of your choice.
-2. Copy the CSS file to your Wofi config directory:
+> [!NOTE]
+> The files available in this repository only change colors. There are some recommended non-color changes that can be accessed by cloning this repository, installing [whiskers](https://github.com/catppuccin/whiskers), running `whiskers wofi.tera --overrides '{"non_color_overrides": "yes"}'` in the cloned repository, and then using the generated file of your preferred flavour and accent combination for step 2.
+
+1. Download the flavor and accent combination of your choice from [themes/](themes).
+2. Copy the CSS file to your Wofi config directory (change `<flavor>` and `<accent>` to the flavor and accent you downloaded):
 
 ```bash
 mkdir -p ~/.config/wofi
-cp frappe.css ~/.config/wofi/style.css  # or latte, macchiato, mocha
+cp <flavor>-<accent>.css ~/.config/wofi/style.css
 ```
 
 3. Make sure your Wofi config points to the style:
@@ -59,6 +62,7 @@ wofi --show drun
 ## 💝 Thanks to
 
 - [Yaman](https://github.com/CyberHuman-bot)
+- [Scarce Koi](https://github.com/scarcekoi)
 
 &nbsp;
 
