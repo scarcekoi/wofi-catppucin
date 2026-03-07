@@ -1,0 +1,69 @@
+/* Catppuccin Frappé - Wofi */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 18px;
+}
+window {
+  background-color: #303446; /* Base */
+  border: 2px solid #85c1dc; /* Accent */
+}
+
+scrollbar,
+scrollbar slider,
+undershoot.top,
+undershoot.bottom {
+  display: none;
+  min-width: 0;
+  min-height: 0;
+  background: none;
+}
+
+#input image {
+  color: #85c1dc; /* Accent */
+  -gtk-icon-effect: none;
+}
+#input {
+  background-color: #414559; /* Surface0 */
+  color: #c6d0f5; /* Text */
+  border: 1px solid #51576d; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid #626880;
+}
+#input:focus {
+  border-color: #85c1dc; /* Accent */
+}
+#input::placeholder {
+  color: #737994; /* Overlay0 */
+}
+#scroll {
+  margin: 0 8px 8px 8px;
+}
+#inner-box {
+  background-color: transparent;
+}
+#outer-box {
+  padding: 4px;
+}
+#entry {
+  padding: 8px 12px;
+  color: #c6d0f5; /* Text */
+  background-color: transparent;
+}
+#entry:selected {
+  background-color: #414559; /* Surface0 */
+  color: #85c1dc; /* Accent */
+}
+#entry:hover {
+  background-color: #51576d; /* Surface1 */
+}
+#text {
+  color: #c6d0f5; /* Text */
+}
+#text:selected {
+  color: #85c1dc; /* Accent */
+}
+#img {
+  margin-right: 8px;
+}

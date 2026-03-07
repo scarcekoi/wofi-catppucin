@@ -1,11 +1,11 @@
-/* Catppuccin Macchiato - Wofi */
+/* Catppuccin Mocha - Wofi */
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 18px;
 }
 window {
-  background-color: #24273a; /* Base */
-  border: 2px solid #b7bdf8; /* flavor.colors[accent] */
+  background-color: #1e1e2e; /* Base */
+  border: 2px solid #94e2d5; /* Accent */
 }
 
 scrollbar,
@@ -19,23 +19,23 @@ undershoot.bottom {
 }
 
 #input image {
-  color: #b7bdf8; /* flavor.colors[accent] */
+  color: #94e2d5; /* Accent */
   -gtk-icon-effect: none;
 }
 #input {
-  background-color: #363a4f; /* Surface0 */
-  color: #cad3f5; /* Text */
-  border: 1px solid #494d64; /* Surface1 */
+  background-color: #313244; /* Surface0 */
+  color: #cdd6f4; /* Text */
+  border: 1px solid #45475a; /* Surface1 */
   padding: 8px 12px;
   margin: 10px;
   border-radius: 35px;
-  outline: 1px solid #5b6078;
+  outline: 1px solid #585b70;
 }
 #input:focus {
-  border-color: #b7bdf8; /* flavor.colors[accent] */
+  border-color: #94e2d5; /* Accent */
 }
 #input::placeholder {
-  color: #6e738d; /* Overlay0 */
+  color: #6c7086; /* Overlay0 */
 }
 #scroll {
   margin: 0 8px 8px 8px;
@@ -48,21 +48,21 @@ undershoot.bottom {
 }
 #entry {
   padding: 8px 12px;
-  color: #cad3f5; /* Text */
+  color: #cdd6f4; /* Text */
   background-color: transparent;
 }
 #entry:selected {
-  background-color: #363a4f; /* Surface0 */
-  color: #b7bdf8; /* flavor.colors[accent] */
+  background-color: #313244; /* Surface0 */
+  color: #94e2d5; /* Accent */
 }
 #entry:hover {
-  background-color: #494d64; /* Surface1 */
+  background-color: #45475a; /* Surface1 */
 }
 #text {
-  color: #cad3f5; /* Text */
+  color: #cdd6f4; /* Text */
 }
 #text:selected {
-  color: #b7bdf8; /* flavor.colors[accent] */
+  color: #94e2d5; /* Accent */
 }
 #img {
   margin-right: 8px;
