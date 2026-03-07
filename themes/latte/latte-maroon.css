@@ -4,25 +4,24 @@
   font-size: 18px;
 }
 
+scrollbar,
+scrollbar slider,
+scrollbar trough,
+undershoot.top,
+undershoot.bottom {
+  display: none;
+  min-width: 0;
+  min-height: 0;
+  background: none;
+  border: none;
+}
+
 window {
   background-color: #eff1f5; /* Base */
   border: 1px solid #e64553;
 }
 #outer-box {
   padding: 10px;
-}
-scrollbar,
-undershoot.top,
-undershoot.bottom {
-  display: flex;
-  min-width: 5px;
-  min-height: 5px;
-  background-color: #eff1f5; /* Base */
-}
-
-scrollbar slider{
- color: #e64553; /* Accent */
- background-color: #e64553; /* Accent */
 }
 
 #input image {
