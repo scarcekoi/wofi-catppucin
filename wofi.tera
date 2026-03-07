@@ -14,7 +14,7 @@ whiskers:
 }
 window {
   background-color: {{ base.hex }}; /* Base */
-  border: 2px solid {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
+  border: 2px solid {{ flavor.colors[accent].hex }}; /* Accent */
 }
 
 scrollbar,
@@ -28,7 +28,7 @@ undershoot.bottom {
 }
 
 #input image {
-  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
   -gtk-icon-effect: none;
 }
 #input {
@@ -41,7 +41,7 @@ undershoot.bottom {
   outline: 1px solid {{ surface2.hex }};
 }
 #input:focus {
-  border-color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
+  border-color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 #input::placeholder {
   color: {{ overlay0.hex }}; /* Overlay0 */
@@ -62,7 +62,7 @@ undershoot.bottom {
 }
 #entry:selected {
   background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 #entry:hover {
   background-color: {{ surface1.hex }}; /* Surface1 */
@@ -71,7 +71,7 @@ undershoot.bottom {
   color: {{ text.hex }}; /* Text */
 }
 #text:selected {
-  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 #img {
   margin-right: 8px;
