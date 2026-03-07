@@ -15,22 +15,22 @@
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="assets/images/latte.png"/>
+<img src="assets/latte.png"/>
 </details>
 
 <details>
 <summary>🪴 Frappé</summary>
-<img src="assets/images/frappe.png"/>
+<img src="assets/frappe.png"/>
 </details>
 
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="assets/images/macchiato.png"/>
+<img src="assets/macchiato.png"/>
 </details>
 
 <details>
 <summary>🌿 Mocha</summary>
-<img src="assets/images/mocha.png"/>
+<img src="assets/mocha.png"/>
 </details>
 
 ## Usage
