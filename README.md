@@ -59,7 +59,7 @@ wofi --show drun
 ## 💝 Thanks to
 
 - [Yaman](https://github.com/CyberHuman-bot)
-
+- [Scarcekoi](https://github.com/scarcekoi)
 &nbsp;
 
 <p align="center">
