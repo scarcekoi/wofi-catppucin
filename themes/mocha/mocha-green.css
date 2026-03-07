@@ -1,17 +1,43 @@
 /* Catppuccin Mocha - Wofi */
+/* Catppuccin Frappé - Wofi */
+* {
+  font-size: 18px;
+}
+
 window {
   background-color: #1e1e2e; /* Base */
-  border-color: #a6e3a1; /* Accent */
+  border: 1px solid #a6e3a1;
+}
+#outer-box {
+  padding: 10px;
+}
+scrollbar,
+undershoot.top,
+undershoot.bottom {
+  display: flex;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: #1e1e2e; /* Base */
+}
+
+scrollbar slider{
+ color: #a6e3a1; /* Accent */
+ background-color: #a6e3a1; /* Accent */
 }
 
 #input image {
   color: #a6e3a1; /* Accent */
+  -gtk-icon-effect: none;
 }
 #input {
   background-color: #313244; /* Surface0 */
-  color: #cdd6f4; /* Text */
-  border-color: #45475a; /* Surface1 */
-  outline-color: #585b70; /* Surface2 */
+  color: #cdd6f4 !important;        /* typed text */
+  caret-color: #a6e3a1;
+  border: 1px solid #45475a; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid #585b70;
 }
 #input:focus {
   border-color: #a6e3a1; /* Accent */
@@ -30,9 +56,10 @@ window {
   background-color: #45475a; /* Surface1 */
 }
 #text {
-  color: #cdd6f4; /* Text */
+  color: #cdd6f4 ; /* Text */
 }
 #text:selected {
   color: #a6e3a1; /* Accent */
 }
+
 

@@ -1,17 +1,43 @@
 /* Catppuccin Macchiato - Wofi */
+/* Catppuccin Frappé - Wofi */
+* {
+  font-size: 18px;
+}
+
 window {
   background-color: #24273a; /* Base */
-  border-color: #f5a97f; /* Accent */
+  border: 1px solid #f5a97f;
+}
+#outer-box {
+  padding: 10px;
+}
+scrollbar,
+undershoot.top,
+undershoot.bottom {
+  display: flex;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: #24273a; /* Base */
+}
+
+scrollbar slider{
+ color: #f5a97f; /* Accent */
+ background-color: #f5a97f; /* Accent */
 }
 
 #input image {
   color: #f5a97f; /* Accent */
+  -gtk-icon-effect: none;
 }
 #input {
   background-color: #363a4f; /* Surface0 */
-  color: #cad3f5; /* Text */
-  border-color: #494d64; /* Surface1 */
-  outline-color: #5b6078; /* Surface2 */
+  color: #cad3f5 !important;        /* typed text */
+  caret-color: #f5a97f;
+  border: 1px solid #494d64; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid #5b6078;
 }
 #input:focus {
   border-color: #f5a97f; /* Accent */
@@ -30,9 +56,10 @@ window {
   background-color: #494d64; /* Surface1 */
 }
 #text {
-  color: #cad3f5; /* Text */
+  color: #cad3f5 ; /* Text */
 }
 #text:selected {
   color: #f5a97f; /* Accent */
 }
+
 

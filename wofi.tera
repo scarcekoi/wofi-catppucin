@@ -9,19 +9,45 @@ whiskers:
 non_color_overrides: "no"
 ---
 {% if non_color_overrides == 'no' %}/* Catppuccin {{ flavor.name }} - Wofi */
+/* Catppuccin Frappé - Wofi */
+* {
+  font-size: 18px;
+}
+
 window {
   background-color: {{ base.hex }}; /* Base */
-  border-color: {{ flavor.colors[accent].hex }}; /* Accent */
+  border: 1px solid {{ flavor.colors[accent].hex}};
+}
+#outer-box {
+  padding: 10px;
+}
+scrollbar,
+undershoot.top,
+undershoot.bottom {
+  display: flex;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: {{ base.hex }}; /* Base */
+}
+
+scrollbar slider{
+ color: {{ flavor.colors[accent].hex }}; /* Accent */
+ background-color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 
 #input image {
   color: {{ flavor.colors[accent].hex }}; /* Accent */
+  -gtk-icon-effect: none;
 }
 #input {
   background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ text.hex }}; /* Text */
-  border-color: {{ surface1.hex }}; /* Surface1 */
-  outline-color: {{ surface2.hex }}; /* Surface2 */
+  color: {{ text.hex }} !important;        /* typed text */
+  caret-color: {{ flavor.colors[accent].hex}};
+  border: 1px solid {{ surface1.hex }}; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid {{ surface2.hex }};
 }
 #input:focus {
   border-color: {{ flavor.colors[accent].hex }}; /* Accent */
@@ -34,17 +60,18 @@ window {
 }
 #entry:selected {
   background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ flavor.colors[accent].hex }}; /* Accent */
+  color: {{ flavor.colors[accent].hex}}; /* Accent */
 }
 #entry:hover {
   background-color: {{ surface1.hex }}; /* Surface1 */
 }
 #text {
-  color: {{ text.hex }}; /* Text */
+  color: {{ text.hex }} ; /* Text */
 }
 #text:selected {
-  color: {{ flavor.colors[accent].hex }}; /* Accent */
+  color: {{ flavor.colors[accent].hex}}; /* Accent */
 }
+
 {% elif non_color_overrides == 'yes' %}/* Catppuccin {{ flavor.name }} - Wofi */
 * {
   font-family: "JetBrainsMono Nerd Font", monospace;
@@ -56,13 +83,17 @@ window {
 }
 
 scrollbar,
-scrollbar slider,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
-  background: none;
+  display: flex;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: {{ base.hex }}; /* Base */
+}
+
+scrollbar slider{
+ color: {{ flavor.colors[accent].hex }}; /* Accent */
+ background-color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 
 #input image {

@@ -1,17 +1,43 @@
 /* Catppuccin Latte - Wofi */
+/* Catppuccin Frappé - Wofi */
+* {
+  font-size: 18px;
+}
+
 window {
   background-color: #eff1f5; /* Base */
-  border-color: #1e66f5; /* Accent */
+  border: 1px solid #1e66f5;
+}
+#outer-box {
+  padding: 10px;
+}
+scrollbar,
+undershoot.top,
+undershoot.bottom {
+  display: flex;
+  min-width: 5px;
+  min-height: 5px;
+  background-color: #eff1f5; /* Base */
+}
+
+scrollbar slider{
+ color: #1e66f5; /* Accent */
+ background-color: #1e66f5; /* Accent */
 }
 
 #input image {
   color: #1e66f5; /* Accent */
+  -gtk-icon-effect: none;
 }
 #input {
   background-color: #ccd0da; /* Surface0 */
-  color: #4c4f69; /* Text */
-  border-color: #bcc0cc; /* Surface1 */
-  outline-color: #acb0be; /* Surface2 */
+  color: #4c4f69 !important;        /* typed text */
+  caret-color: #1e66f5;
+  border: 1px solid #bcc0cc; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid #acb0be;
 }
 #input:focus {
   border-color: #1e66f5; /* Accent */
@@ -30,9 +56,10 @@ window {
   background-color: #bcc0cc; /* Surface1 */
 }
 #text {
-  color: #4c4f69; /* Text */
+  color: #4c4f69 ; /* Text */
 }
 #text:selected {
   color: #1e66f5; /* Accent */
 }
+
 
