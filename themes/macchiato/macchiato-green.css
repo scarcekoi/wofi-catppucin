@@ -5,8 +5,9 @@
 }
 window {
   background-color: #24273a; /* Base */
-  border: 2px solid #c6a0f6; /* Mauve */
+  border: 2px solid #a6da95; /* Accent */
 }
+
 scrollbar,
 scrollbar slider,
 undershoot.top,
@@ -16,8 +17,9 @@ undershoot.bottom {
   min-height: 0;
   background: none;
 }
+
 #input image {
-  color: #c6a0f6;
+  color: #a6da95; /* Accent */
   -gtk-icon-effect: none;
 }
 #input {
@@ -30,7 +32,7 @@ undershoot.bottom {
   outline: 1px solid #5b6078;
 }
 #input:focus {
-  border-color: #c6a0f6; /* Mauve */
+  border-color: #a6da95; /* Accent */
 }
 #input::placeholder {
   color: #6e738d; /* Overlay0 */
@@ -51,7 +53,7 @@ undershoot.bottom {
 }
 #entry:selected {
   background-color: #363a4f; /* Surface0 */
-  color: #c6a0f6; /* Mauve */
+  color: #a6da95; /* Accent */
 }
 #entry:hover {
   background-color: #494d64; /* Surface1 */
@@ -60,7 +62,7 @@ undershoot.bottom {
   color: #cad3f5; /* Text */
 }
 #text:selected {
-  color: #c6a0f6; /* Mauve */
+  color: #a6da95; /* Accent */
 }
 #img {
   margin-right: 8px;

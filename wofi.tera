@@ -1,0 +1,78 @@
+---
+whiskers:
+  version: "^2.8.0"
+  matrix:
+    - flavor
+    - accent
+  filename: "themes/{{ flavor.identifier }}/{{ flavor.identifier }}-{{ accent }}.css"
+  hex_format: "#{{r}}{{g}}{{b}}{{z}}"
+---
+/* Catppuccin {{ flavor.name }} - Wofi */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 18px;
+}
+window {
+  background-color: {{ base.hex }}; /* Base */
+  border: 2px solid {{ flavor.colors[accent].hex }}; /* Accent */
+}
+
+scrollbar,
+scrollbar slider,
+undershoot.top,
+undershoot.bottom {
+  display: none;
+  min-width: 0;
+  min-height: 0;
+  background: none;
+}
+
+#input image {
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
+  -gtk-icon-effect: none;
+}
+#input {
+  background-color: {{ surface0.hex }}; /* Surface0 */
+  color: {{ text.hex }}; /* Text */
+  border: 1px solid {{ surface1.hex }}; /* Surface1 */
+  padding: 8px 12px;
+  margin: 10px;
+  border-radius: 35px;
+  outline: 1px solid {{ surface2.hex }};
+}
+#input:focus {
+  border-color: {{ flavor.colors[accent].hex }}; /* Accent */
+}
+#input::placeholder {
+  color: {{ overlay0.hex }}; /* Overlay0 */
+}
+#scroll {
+  margin: 0 8px 8px 8px;
+}
+#inner-box {
+  background-color: transparent;
+}
+#outer-box {
+  padding: 4px;
+}
+#entry {
+  padding: 8px 12px;
+  color: {{ text.hex }}; /* Text */
+  background-color: transparent;
+}
+#entry:selected {
+  background-color: {{ surface0.hex }}; /* Surface0 */
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
+}
+#entry:hover {
+  background-color: {{ surface1.hex }}; /* Surface1 */
+}
+#text {
+  color: {{ text.hex }}; /* Text */
+}
+#text:selected {
+  color: {{ flavor.colors[accent].hex }}; /* Accent */
+}
+#img {
+  margin-right: 8px;
+}
