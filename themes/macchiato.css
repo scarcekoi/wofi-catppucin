@@ -7,6 +7,7 @@ window {
   background-color: #24273a; /* Base */
   border: 2px solid #c6a0f6; /* Mauve */
 }
+
 scrollbar,
 scrollbar slider,
 undershoot.top,
@@ -16,8 +17,9 @@ undershoot.bottom {
   min-height: 0;
   background: none;
 }
+
 #input image {
-  color: #c6a0f6;
+  color: #c6a0f6; /* Mauve */
   -gtk-icon-effect: none;
 }
 #input {

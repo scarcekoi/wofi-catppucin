@@ -19,7 +19,7 @@ undershoot.bottom {
 }
 
 #input image {
-  color: #8839ef;
+  color: #8839ef; /* Mauve */
   -gtk-icon-effect: none;
 }
 #input {
@@ -33,6 +33,9 @@ undershoot.bottom {
 }
 #input:focus {
   border-color: #8839ef; /* Mauve */
+}
+#input::placeholder {
+  color: #9ca0b0; /* Overlay0 */
 }
 #scroll {
   margin: 0 8px 8px 8px;
