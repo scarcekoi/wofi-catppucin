@@ -3,6 +3,7 @@ whiskers:
   version: "^2.8.0"
   matrix:
     - flavor
+    - accent
   filename: "themes/{{ flavor.identifier }}.css"
   hex_format: "#{{r}}{{g}}{{b}}{{z}}"
 ---
@@ -13,7 +14,7 @@ whiskers:
 }
 window {
   background-color: {{ base.hex }}; /* Base */
-  border: 2px solid {{ mauve.hex }}; /* Mauve */
+  border: 2px solid {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
 }
 
 scrollbar,
@@ -27,7 +28,7 @@ undershoot.bottom {
 }
 
 #input image {
-  color: {{ mauve.hex }}; /* Mauve */
+  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
   -gtk-icon-effect: none;
 }
 #input {
@@ -40,7 +41,7 @@ undershoot.bottom {
   outline: 1px solid {{ surface2.hex }};
 }
 #input:focus {
-  border-color: {{ mauve.hex }}; /* Mauve */
+  border-color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
 }
 #input::placeholder {
   color: {{ overlay0.hex }}; /* Overlay0 */
@@ -61,7 +62,7 @@ undershoot.bottom {
 }
 #entry:selected {
   background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ mauve.hex }}; /* Mauve */
+  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
 }
 #entry:hover {
   background-color: {{ surface1.hex }}; /* Surface1 */
@@ -70,7 +71,7 @@ undershoot.bottom {
   color: {{ text.hex }}; /* Text */
 }
 #text:selected {
-  color: {{ mauve.hex }}; /* Mauve */
+  color: {{ flavor.colors[accent].hex }}; /* flavor.colors[accent] */
 }
 #img {
   margin-right: 8px;
