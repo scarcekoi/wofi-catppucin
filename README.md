@@ -11,6 +11,10 @@
 	<a href="https://github.com/catppuccin/wofi/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/wofi?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
 </p>
 
+<p align="center">
+	<img src="assets/preview.webp"/>
+</p>
+
 ## Previews
 
 <details>
