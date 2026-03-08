@@ -24,10 +24,6 @@ undershoot.bottom {
 scrollbar slider{
   background-color: #f2cdcd;
 }
-window {
-  background-color: #1e1e2e; /* Base */
-  border: 1px solid #f2cdcd;
-}
 #outer-box {
   padding: 10px;
 }
