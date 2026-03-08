@@ -5,9 +5,9 @@ whiskers:
   matrix:
     - flavor
     - accent
-  filename: "themes/{{ flavor.identifier }}/{{ flavor.identifier }}-{{ accent }}.css"
+    - non_color_overrides: ["no", "yes"]
+  filename: "themes/{% if non_color_overrides == 'yes' %}non_color_overrides/{% endif %}{{ flavor.identifier }}/{{ flavor.identifier }}-{{ accent }}.css"
   hex_format: "#{{r}}{{g}}{{b}}"
-non_color_overrides: "no"
 ---
 {% if non_color_overrides == 'no' %}/* Catppuccin {{ flavor.name }} - Wofi */
 * {
