@@ -40,7 +40,7 @@
 ## Usage
 
 > [!NOTE]
-> The files available in this repository only change colors. There are some recommended non-color changes that can be accessed by cloning this repository, installing [whiskers](https://github.com/catppuccin/whiskers), running `whiskers wofi.tera --overrides '{"non_color_overrides": "yes"}'` in the cloned repository, and then using the generated file of your preferred flavour and accent combination for step 2.
+> There are two versions of this theme available in this repository: one with non-color overrides (recommended) and one without. The non-color overrides files are in `themes/non_color_overrides/<flavor>/<flavor>-<accent>.css` and the files with only color overrides are in `themes/<flavor>/<flavor>-<accent>.css`.
 
 1. Download the flavor and accent combination of your choice from [themes/](themes).
 2. Copy the CSS file to your Wofi config directory (change `<flavor>` and `<accent>` to the flavor and accent you downloaded):
