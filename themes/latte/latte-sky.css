@@ -1,21 +1,29 @@
 /* Catppuccin Latte - Wofi */
-/* Catppuccin Frappé - Wofi */
 * {
   font-size: 18px;
 }
-
+#scroll {
+  background-color: #eff1f5;
+}
+#outer-box {
+  background-color: #eff1f5;
+  padding: 10px;
+  border: 2px solid #04a5e5;
+}
+#main {
+  background-color: #eff1f5;
+}
 scrollbar,
-scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
+  min-width: 5px;
+  min-height: 5px;
   background: none;
-  border: none;
 }
-
+scrollbar slider{
+  background-color: #04a5e5;
+}
 window {
   background-color: #eff1f5; /* Base */
   border: 1px solid #04a5e5;
@@ -30,7 +38,7 @@ window {
 }
 #input {
   background-color: #ccd0da; /* Surface0 */
-  color: #4c4f69 !important;        /* typed text */
+  color: #4c4f69;        /* typed text */
   caret-color: #04a5e5;
   border: 1px solid #bcc0cc; /* Surface1 */
   padding: 8px 12px;
@@ -41,15 +49,20 @@ window {
 #input:focus {
   border-color: #04a5e5; /* Accent */
 }
-#input::placeholder {
-  color: #9ca0b0; /* Overlay0 */
+#input placeholder {
+  color: #eff1f5; /* Overlay0 */
 }
 #entry {
-  color: #4c4f69; /* Text */
+  background-color: #eff1f5;
+  color: #4c4f69;
+}
+#entry #entry:selected {
+  background-color: #ccd0da;
+  color: #04a5e5;
 }
 #entry:selected {
-  background-color: #ccd0da; /* Surface0 */
-  color: #04a5e5; /* Accent */
+  background-color: #ccd0da;
+  color: #04a5e5;
 }
 #entry:hover {
   background-color: #bcc0cc; /* Surface1 */

@@ -1,3 +1,4 @@
+
 ---
 whiskers:
   version: "^2.8.0"
@@ -5,27 +6,35 @@ whiskers:
     - flavor
     - accent
   filename: "themes/{{ flavor.identifier }}/{{ flavor.identifier }}-{{ accent }}.css"
-  hex_format: "#{{r}}{{g}}{{b}}{{z}}"
+  hex_format: "#{{r}}{{g}}{{b}}"
 non_color_overrides: "no"
 ---
 {% if non_color_overrides == 'no' %}/* Catppuccin {{ flavor.name }} - Wofi */
-/* Catppuccin Frappé - Wofi */
 * {
   font-size: 18px;
 }
-
+#scroll {
+  background-color: {{ base.hex }};
+}
+#outer-box {
+  background-color: {{ base.hex }};
+  padding: 10px;
+  border: 2px solid {{ flavor.colors[accent].hex }};
+}
+#main {
+  background-color: {{ base.hex }};
+}
 scrollbar,
-scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
+  min-width: 5px;
+  min-height: 5px;
   background: none;
-  border: none;
 }
-
+scrollbar slider{
+  background-color: {{ flavor.colors[accent].hex}};
+}
 window {
   background-color: {{ base.hex }}; /* Base */
   border: 1px solid {{ flavor.colors[accent].hex}};
@@ -40,7 +49,7 @@ window {
 }
 #input {
   background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ text.hex }} !important;        /* typed text */
+  color: {{ text.hex }};        /* typed text */
   caret-color: {{ flavor.colors[accent].hex}};
   border: 1px solid {{ surface1.hex }}; /* Surface1 */
   padding: 8px 12px;
@@ -51,15 +60,20 @@ window {
 #input:focus {
   border-color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
-#input::placeholder {
-  color: {{ overlay0.hex }}; /* Overlay0 */
+#input placeholder {
+  color: {{ base.hex }}; /* Overlay0 */
 }
 #entry {
-  color: {{ text.hex }}; /* Text */
+  background-color: {{ base.hex }};
+  color: {{ text.hex }};
+}
+#entry #entry:selected {
+  background-color: {{ surface0.hex }};
+  color: {{ flavor.colors[accent].hex }};
 }
 #entry:selected {
-  background-color: {{ surface0.hex }}; /* Surface0 */
-  color: {{ flavor.colors[accent].hex}}; /* Accent */
+  background-color: {{ surface0.hex }};
+  color: {{ flavor.colors[accent].hex }};
 }
 #entry:hover {
   background-color: {{ surface1.hex }}; /* Surface1 */
@@ -86,9 +100,9 @@ scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
   min-width: 0;
   min-height: 0;
+  opacity: 0;          /* GTK-safe way to hide */
   background: none;
   border: none;
 }
@@ -109,7 +123,7 @@ undershoot.bottom {
 #input:focus {
   border-color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
-#input::placeholder {
+#input placeholder {
   color: {{ overlay0.hex }}; /* Overlay0 */
 }
 #scroll {
@@ -128,6 +142,8 @@ undershoot.bottom {
 }
 #entry:selected {
   background-color: {{ surface0.hex }}; /* Surface0 */
+  border-radius: 5px;
+  border: none;
   color: {{ flavor.colors[accent].hex }}; /* Accent */
 }
 #entry:hover {

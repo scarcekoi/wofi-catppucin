@@ -1,21 +1,29 @@
 /* Catppuccin Mocha - Wofi */
-/* Catppuccin Frappé - Wofi */
 * {
   font-size: 18px;
 }
-
+#scroll {
+  background-color: #1e1e2e;
+}
+#outer-box {
+  background-color: #1e1e2e;
+  padding: 10px;
+  border: 2px solid #74c7ec;
+}
+#main {
+  background-color: #1e1e2e;
+}
 scrollbar,
-scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
+  min-width: 5px;
+  min-height: 5px;
   background: none;
-  border: none;
 }
-
+scrollbar slider{
+  background-color: #74c7ec;
+}
 window {
   background-color: #1e1e2e; /* Base */
   border: 1px solid #74c7ec;
@@ -30,7 +38,7 @@ window {
 }
 #input {
   background-color: #313244; /* Surface0 */
-  color: #cdd6f4 !important;        /* typed text */
+  color: #cdd6f4;        /* typed text */
   caret-color: #74c7ec;
   border: 1px solid #45475a; /* Surface1 */
   padding: 8px 12px;
@@ -41,15 +49,20 @@ window {
 #input:focus {
   border-color: #74c7ec; /* Accent */
 }
-#input::placeholder {
-  color: #6c7086; /* Overlay0 */
+#input placeholder {
+  color: #1e1e2e; /* Overlay0 */
 }
 #entry {
-  color: #cdd6f4; /* Text */
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+#entry #entry:selected {
+  background-color: #313244;
+  color: #74c7ec;
 }
 #entry:selected {
-  background-color: #313244; /* Surface0 */
-  color: #74c7ec; /* Accent */
+  background-color: #313244;
+  color: #74c7ec;
 }
 #entry:hover {
   background-color: #45475a; /* Surface1 */

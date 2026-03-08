@@ -1,21 +1,29 @@
 /* Catppuccin Frappé - Wofi */
-/* Catppuccin Frappé - Wofi */
 * {
   font-size: 18px;
 }
-
+#scroll {
+  background-color: #303446;
+}
+#outer-box {
+  background-color: #303446;
+  padding: 10px;
+  border: 2px solid #e78284;
+}
+#main {
+  background-color: #303446;
+}
 scrollbar,
-scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
+  min-width: 5px;
+  min-height: 5px;
   background: none;
-  border: none;
 }
-
+scrollbar slider{
+  background-color: #e78284;
+}
 window {
   background-color: #303446; /* Base */
   border: 1px solid #e78284;
@@ -30,7 +38,7 @@ window {
 }
 #input {
   background-color: #414559; /* Surface0 */
-  color: #c6d0f5 !important;        /* typed text */
+  color: #c6d0f5;        /* typed text */
   caret-color: #e78284;
   border: 1px solid #51576d; /* Surface1 */
   padding: 8px 12px;
@@ -41,15 +49,20 @@ window {
 #input:focus {
   border-color: #e78284; /* Accent */
 }
-#input::placeholder {
-  color: #737994; /* Overlay0 */
+#input placeholder {
+  color: #303446; /* Overlay0 */
 }
 #entry {
-  color: #c6d0f5; /* Text */
+  background-color: #303446;
+  color: #c6d0f5;
+}
+#entry #entry:selected {
+  background-color: #414559;
+  color: #e78284;
 }
 #entry:selected {
-  background-color: #414559; /* Surface0 */
-  color: #e78284; /* Accent */
+  background-color: #414559;
+  color: #e78284;
 }
 #entry:hover {
   background-color: #51576d; /* Surface1 */

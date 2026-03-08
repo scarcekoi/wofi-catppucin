@@ -1,21 +1,29 @@
 /* Catppuccin Macchiato - Wofi */
-/* Catppuccin Frappé - Wofi */
 * {
   font-size: 18px;
 }
-
+#scroll {
+  background-color: #24273a;
+}
+#outer-box {
+  background-color: #24273a;
+  padding: 10px;
+  border: 2px solid #f0c6c6;
+}
+#main {
+  background-color: #24273a;
+}
 scrollbar,
-scrollbar slider,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  display: none;
-  min-width: 0;
-  min-height: 0;
+  min-width: 5px;
+  min-height: 5px;
   background: none;
-  border: none;
 }
-
+scrollbar slider{
+  background-color: #f0c6c6;
+}
 window {
   background-color: #24273a; /* Base */
   border: 1px solid #f0c6c6;
@@ -30,7 +38,7 @@ window {
 }
 #input {
   background-color: #363a4f; /* Surface0 */
-  color: #cad3f5 !important;        /* typed text */
+  color: #cad3f5;        /* typed text */
   caret-color: #f0c6c6;
   border: 1px solid #494d64; /* Surface1 */
   padding: 8px 12px;
@@ -41,15 +49,20 @@ window {
 #input:focus {
   border-color: #f0c6c6; /* Accent */
 }
-#input::placeholder {
-  color: #6e738d; /* Overlay0 */
+#input placeholder {
+  color: #24273a; /* Overlay0 */
 }
 #entry {
-  color: #cad3f5; /* Text */
+  background-color: #24273a;
+  color: #cad3f5;
+}
+#entry #entry:selected {
+  background-color: #363a4f;
+  color: #f0c6c6;
 }
 #entry:selected {
-  background-color: #363a4f; /* Surface0 */
-  color: #f0c6c6; /* Accent */
+  background-color: #363a4f;
+  color: #f0c6c6;
 }
 #entry:hover {
   background-color: #494d64; /* Surface1 */
